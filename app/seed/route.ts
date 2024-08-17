@@ -1,17 +1,17 @@
 import bcrypt from 'bcrypt';
-// import { db } from '@vercel/postgres';
+import { db } from '@vercel/postgres';
 import { invoices, customers, revenue, users } from '../lib/placeholder-data';
-import postgres from "postgres";
+// import postgres from "postgres";
 
 
-const DB_URL = `${process.env.POSTGRES_URL}`
+// const DB_URL = `${process.env.POSTGRES_URL}`
 
-const client = {
-  sql: postgres(DB_URL),
-}
+// const client = {
+//   sql: postgres(DB_URL),
+// }
 
 
-// const client = await db.connect();
+const client = await db.connect();
 
 
 async function seedUsers() {
